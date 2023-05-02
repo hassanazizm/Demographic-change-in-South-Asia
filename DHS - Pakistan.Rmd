@@ -1,0 +1,67 @@
+---
+title: "Contraception_pakistan"
+author: "Hassan Aziz"
+date: "2023-04-17"
+output: html_document
+---
+
+```{r}
+length(colnames(birth))
+str(birth)
+library(Hmisc)
+library(sjlabelled) 
+
+# Use the describe() function to generate descriptive statistics for all variables
+# Use the contents() function to create a summary table with variable names, labels, data types, etc.
+birth_codebook <- contents(birth)
+birth_codebook
+birth_codebook_df <- do.call(data.frame, birth_codebook)
+birth$v106
+# Write the codebook to a file
+write.csv(my_codebook, file = "birth_codebook.csv", row.names = FALSE)
+get_label(birth)
+(birth$v101)
+# contraception: v312
+# ICT: 
+# v384a	heard family planning on radio last few months
+# v384b	heard family planning on tv last few months	
+# v384c	heard family planning in newspaper/magazine last few months	
+# v384d	heard family planning by text messages on mobile phone
+
+# v393	visited by fieldworker in last 12 months	
+# v393a	did fieldworker talk about family planning	
+# v394	visited health facility last 12 months	
+# v395	at health facility, told of family planning	
+# v3a08a - v3a08v reasons for not using 
+# v602 - fertility preference
+# v603	preferred waiting time for birth of a/another child	
+# v613	ideal number of children	
+# v614	ideal number of children (grouped)	
+# v621	husband's desire for children	
+# v623	exposure	
+# v624	unmet need	
+# v625	exposure (definition 2)	
+# v626	unmet need (definition 2)	
+# v627	ideal number of boys	
+# v628	ideal number of girls	
+# v629	ideal number of either sex	
+# v632	decision maker for using contraception
+# v632a	decision maker for not using contraception	
+# v701	husband/partner's education level	
+# v704	husband/partner's occupation	
+# v705	husband/partner's occupation (grouped)	
+# v714	respondent currently working	
+# v714a	respondent has a job, but currently absent
+# v715	husband/partner's total number of years of education	
+# v716	respondent's occupation	
+# v717	respondent's occupation (grouped)	
+# v719	respondent works for family, others, self	
+# v730	husband/partner's age
+# v731	respondent worked in last 12 months	
+# v732	respondent employed all year/seasonal	
+# v739	person who usually decides how to spend respondent's earnings	
+# v743a	person who usually decides on respondent's health care	
+# v743b	person who usually decides on large household purchases
+
+
+```
